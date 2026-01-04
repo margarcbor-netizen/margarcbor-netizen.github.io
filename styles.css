@@ -1,0 +1,39 @@
+body {
+    background-color: #ffffff;
+    @font-face {
+            font-family: Helvetica, sans-serif;
+            src: url(./fuente/Helvetica\ LT\ Std/) format('truetype');
+        }
+    }
+
+/* navbar*/
+.navbar-brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight:bold
+}
+.navbar-brand:hover {
+    color: #9b909f;
+    /*font-size: 20px; mejor no, que amorfa el div y es rarete*/
+}
+
+.navbar-nav .nav-link {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold; 
+    margin: 0 100px; /* separar numerillos enlaces */
+}
+
+
+.navbar-nav .nav-link:hover { 
+    color: #9b909f;
+    font-weight: bolder; 
+}
+
+/*titulos ej*/
+h2 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
