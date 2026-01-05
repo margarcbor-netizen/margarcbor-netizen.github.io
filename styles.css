@@ -1,3 +1,4 @@
+
 body {
     background-color: #ffffff;
     @font-face {
@@ -6,34 +7,196 @@ body {
         }
     }
 
+    a {
+        text-decoration: none;
+        color: black
+    }
+
 /* navbar*/
-.navbar-brand {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight:bold
-}
-.navbar-brand:hover {
-    color: #9b909f;
-    /*font-size: 20px; mejor no, que amorfa el div y es rarete*/
-}
-
-.navbar-nav .nav-link {
-    font-size: 15px;
-    color: #ffffff;
-    font-weight: bold; 
-    margin: 0 100px; /* separar numerillos enlaces */
-}
-
-
-.navbar-nav .nav-link:hover { 
-    color: #9b909f;
-    font-weight: bolder; 
-}
-
-/*titulos ej*/
-h2 {
+.navbar {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 5%;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 2000;
 }
+.navbar button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+/*carrousel*/
+.carousel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;/* banda horizontal */
+  overflow: hidden;
+  z-index: 5;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: scroll 22s linear infinite; 
+}
+
+.carousel-track img {
+  height: 100%;
+  width: auto;
+  margin-right: 3rem;
+  object-fit: cover;
+}
+/*.carousel:hover .carousel-track {
+  animation-play-state: paused; para al ponerte encima?
+}*/
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+/*carrousel
+    .flow {
+    height: 100vh;
+    overflow: hidden;
+    }
+
+    .carousel {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    }
+
+    .carousel-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    animation: scroll 20s linear infinite; /* esto es velocidad a la que deslizan sin interaccion
+    }
+
+    .carousel-track img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    } */
+
+
+/* carrousel 2
+.carousel-section {
+  padding-bottom: 2rem 0;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden; /* aquí desaparecen por los lados 
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-track img {
+  height: 240px; /* franja horizontal 
+  margin-right: 3rem;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}*/
+
+
+
+/* archivo panel*/
+#archivoPanel {
+  position: fixed;
+  inset: 0;
+  background: white;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: 1500;
+  padding: 6rem 3rem;
+}
+
+#archivoPanel.open {
+  transform: translateY(0);
+}
+
+#archivoPanel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#archivoPanel li {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}*/
+
+
+
+
+
+
+
+/*de los inicios*/
+
+/*
+.nav-bar {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 2%;
+    color: black;
+}*/
+
+
+/* footer*/
+footer {
+    font-size: 0.60rem;
+    letter-spacing: 0.5px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 2%;
+    color: black;
+}
+
+/*footer a:hover {
+  color: rgb(157, 161, 164);
+}*/
