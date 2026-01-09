@@ -32,9 +32,111 @@
         </div>
     </main>
 
+ <!-- archivo=indice -->   
+    <section class="archivo-section" id="archivoPanel">
+        <div class="archivo-content">
+        <!--<div class="archivo-header">
+                <h1>proyectos seleccionados</h1>
+            </div>-->
+
+            <div class="archivo-columna"> <!--contiene todos-->
+
+                <article class="archivo-proyecto" id="nodo"> <!-- proyecto individual, <article> representa una unidad de contenido independiente-->
+                    <div class="archivo-imagen"> <!-- fija img en columna a la izq + admite pseudo-elementos + para mantener flexibilidad.-->
+                        <img src="./img2/1_p2.png" width="230"> 
+                    </div> 
+                        <div class="archivo-texto"> <!-- agrupa el texto a la derecha de la img + limita ancho-->
+                            <!-- <span class="archivo-num">001</span>/*-->
+                            <h2> NODO <br> lámpara desde la limitación </h2>
+                                <p> <!-- subtítulo, tipologia, cliente(?), -->
+                                    tipologia/objeto<br>
+                                    <!--dimensiones, si aplica -->
+                                    proyecto académico<br>
+                                    en junio, 2025 <br>
+                                </p>
+                            <a href="nodo.html" class="un-vistazo"> <!-- FLECHA, así puedes cambiar color o meter algun hover-->
+                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                        </div>
+                </article>
+
+
+                <article class="archivo-proyecto" id="archivo-coxal"> 
+                    <div class="archivo-imagen"> 
+                        <img src="./img2/2_p.jpg" width="230">
+                    </div> 
+                        <div class="archivo-texto"> 
+                            <h2>COXAL<br>Joyería desde la exploración formal</h2>
+                                <p>
+                                    tipologia/objeto<br>
+                                    proyecto académico<br>
+                                    en enero, 2025<br>
+                                </p>
+                            <a href="coxal.html" class="un-vistazo"> 
+                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                        </div>
+                </article>
+
+
+                <article class="archivo-proyecto" id="archivo-lúdico"> 
+                    <div class="archivo-imagen">
+                        <img src="./img2/3_p.png" width="230">
+                    </div> 
+                        <div class="archivo-texto">
+                            <h2>LÚDICO<br>sistema expositivo modular</h2>
+                                <p>
+                                    tipologia/objeto<br>
+                                    cliente/Dior<br>
+                                    en mayo, 2025<br>
+                                </p>
+                            <a href="ludico.html" class="un-vistazo"> 
+                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                        </div>
+                </article>
+
+                <article class="archivo-proyecto" id="archivo-bitácora"> 
+                    <div class="archivo-imagen">
+                        <img src="./img2/4_p.png" width="230">
+                    </div> 
+                        <div class="archivo-texto">
+                            <h2>BITÁCORA<br>archivo de técnicas de producción</h2>
+                                <p>
+                                    tipologia/editorial<br>
+                                    proyecto académico<br>
+                                    en mayo, 2025<br>
+                                </p>
+                            <a href="bitácora.html" class="un-vistazo">
+                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                        </div>
+                </article>
+
+                <article class="archivo-proyecto" id="archivo-insights"> 
+                    <div class="archivo-imagen">
+                        <img src="./img2/5_p.jpg" width="230">
+                    </div> 
+                        <div class="archivo-texto">
+                            <h2>INSIGHTS<br>reconquista del espacio público<br></h2>
+                                <p>
+                                    tipologia/investigación<br>
+                                    proyecto académico<br>
+                                    en mayo, 2023<br>
+                                </p>
+                            <a href="" class="un-vistazo"> 
+                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                        </div>
+                </article>
+
+            </div>
+        </div>
+    </section> 
+
     <!--footer + especie de nav bar = tendría info + botón archivo, es lógico que si
-    el panel sale de abajo pulses el botón abajo, como si la pesataña del archivo sobrealiera y tu la "sacaras"
-    <footer id="info-bar">
+    el panel sale de abajo pulses el botón abajo, como si la pesataña del archivo sobrealiera y tu la "sacaras"-->
+    <footer id="infoBar">
         <div class="info-left">
             <p>
                 Sample Profile<br>
@@ -51,123 +153,10 @@
             </p>
         </div>
 
-        <div class="info-right">
-            <button id="archivo-toggle">archivo</button> seria poner aquí el botón de archivo 
-        </div>
-        </footer> -->
-
- <!-- archivo=indice -->   
-    <section class="archivo-section" id="archivoPanel">
-        <div class="archivo-content">
-        <!--<div class="archivo-header">
-                <h1>proyectos seleccionados</h1>
-            </div>-->
-
-            <div class="archivo-columna"> <!--contiene todos-->
-
-                <article class="archivo-proyecto" id="nodo"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/1_p2.png" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <!-- <span class="archivo-num">001</span>/*-->
-                            <h2>Nodo<br>en junio, 2025</h2>
-                                <p>
-                                    lámpara desde la limitación<br>
-                                    tipologia/objeto<br>
-                                    proyecto académico<br>
-                                </p>
-                            <button class="un-vistazo"> un vistazo? </button>
-                        </div>
-                </article>
-
-                <article class="archivo-proyecto" id="coxal"> <!-- proyecto individual, <article> representa una unidad de contenido independiente-->
-                    <div class="archivo-imagen"> <!-- fija img en columna a la izq + admite pseudo-elementos + para mantener flexibilidad.-->
-                        <img src="./img2/2_p.jpg" width="230">
-                    </div> 
-                        <div class="archivo-texto"> <!-- agrupa el texto a la derecha de la img + limita ancho-->
-                            <h2>Coxal<br>en enero, 2025</h2>
-                                <p> <!-- subtítulo, tipologia, cliente(?), -->
-                                    Joyería desde la exploración formal<br>
-                                    <!--dimensiones, si aplica -->
-                                    tipologia/objeto<br>
-                                    proyecto académico<br>
-                                </p>
-                            <button class="un-vistazo">un vistazo?</button>
-                        </div>
-                </article>
-
-
-                <article class="archivo-proyecto" id="lúdico"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/3_p.png" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <h2>Lúdico<br>en mayo, 2025</h2>
-                                <p>
-                                    sistema expositivo modular<br>
-                                    tipologia/objeto<br>
-                                    cliente/Dior<br>
-                                </p>
-                            <button class="un-vistazo"> un vistazo?</button>
-                        </div>
-                </article>
-
-                <article class="archivo-proyecto" id="bitácora"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/4_p.png" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <h2>Bitácora<br>en mayo, 2025</h2>
-                                <p>
-                                    archivo de técnicas de producción<br>
-                                    tipologia/editorial<br>
-                                    proyecto académico<br>
-                                </p>
-                            <button class="un-vistazo"> un vistazo? </button>
-                        </div>
-                </article>
-
-                <article class="archivo-proyecto" id="insights"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/5_p.jpg" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <h2>Insights            en mayo, 2023</h2>
-                                <p>
-                                    reconquista del espacio público<br>
-                                    tipologia/investigación<br>
-                                    proyecto académico<br>
-                                </p>
-                            <button class="un-vistazo"> un vistazo? </button>
-                        </div>
-                </article>
-
-            </div>
-        </div>
-    </section> 
-
-
-
-    <!-- template texto 
-     <article class="archivo-proyecto" id="nodo"> 
-                <div class="archivo-imagen">
-                    <img src="./img/metal.jpg" width="250">
-                </div> 
-                    <div class="archivo-texto">
-                        <span class="archivo-num">001</span>
-                        <h2>Curabitur Suspendisse<br>La Risus, 1914</h2>
-                            <p>
-                                Bronze<br>
-                                61 × 46 × 41 cm<br>
-                                Mauris, Enim<br>
-                                © 2019 Vestibulum Feugiat Posuere
-                            </p>
-                        <button class="un-vistazo">[ un vistazo? ]</button>
-                    </div>
-            </article>
-     
-    -->
+        <!--<div class="info-right">
+            <button id="archivoBtn">archivo</button> si archivo fuera aquí 
+        </div>-->
+        </footer> 
 
 
 

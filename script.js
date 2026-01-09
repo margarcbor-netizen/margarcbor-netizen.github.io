@@ -3,10 +3,10 @@
 const archivoBtn = document.getElementById('archivoBtn');
 const archivoPanel = document.getElementById('archivoPanel');
 const flowTrack = document.getElementById("flowTrack");
+const infoBar = document.querySelector("infoBar");
 
 archivoBtn.addEventListener('click', () => {
     archivoPanel.classList.toggle('desplegar');
-    
 });
 
 archivoPanel.querySelectorAll('a').forEach(link => {
@@ -16,6 +16,20 @@ archivoPanel.querySelectorAll('a').forEach(link => {
 })
 
 
+
+
+
+
+/*al desplegar panel ocultar flow y info= pasando
+
+if (archivoPanel.classList.contains("desplegar")) {
+      infoBar.classList.add("ocultar");  // se oculta infoBar
+      flow.classList.add("oculto");      // se oculta carrusel
+    } else {
+      infoBar.classList.remove("ocultar"); // reaparece infoBar
+      flow.classList.remove("oculto");     // reaparece carrusel
+    }
+    
 
 /*al desplegar panel ocultar carroulsel = funciona, pero el carrousel ensucia. quiza si
 home es de otra forma puedes usarlo u mola
