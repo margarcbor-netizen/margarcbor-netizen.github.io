@@ -36,14 +36,14 @@ body {
     cursor: pointer;
 }
 
-body.archivo-open .navbar button { /*cambio para contraste*/
+body#archivoPanel-open .navbar button { /*cambio para contraste*/
   color: white;
 }
 
 
 
-/*carrousel*/
-.carousel {
+/*flow*/
+.flow {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -53,22 +53,28 @@ body.archivo-open .navbar button { /*cambio para contraste*/
   z-index: 5;
 }
 
-.carousel-track {
+.flow-track {
   display: flex;
   width: max-content;
   height: 100%;
   animation: scroll 22s linear infinite; /* su velocidad natural */
 }
 
-.carousel-track img {
+.flow-track img {
   height: 100%;
   width: auto;
   /*margin-right: 3rem;*/
   object-fit: cover;
 }
-/*.carousel:hover .carousel-track {
-  animation-play-state: paused; para al ponerte encima?
+
+/*al desplegar panel archivo (era para blurry, nada)
+    #flowTrack.oculto {
+    opacity: 0.1;   /* Si lo pones a 0 el efecto blurry no funciona, porque necesita algo detrás
+    pointer-events: none;
+    animation-play-state: paused;
 }*/
+
+
 
 @keyframes scroll {
   from {
@@ -79,46 +85,6 @@ body.archivo-open .navbar button { /*cambio para contraste*/
   }
 }
 
-/*#info-bar {
-  background: #ffffff;
-  color: #111;
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-
-  padding: 0;
-  z-index: 30;
-}
-
-          #info-bar p {
-            font-size: 11px;
-            line-height: 1.5;
-            margin: 0;
-          }
-
-          .info-left {
-            font-size: 11px;
-          }
-          .info-center {
-            max-width: 520px;
-            margin: 0 auto;
-            font-size: 11px;
-          }
-
-          .info-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            justify-content: flex-end;
-          } */
-
 
 /*archivo panel full*/
 #archivoPanel {
@@ -128,8 +94,9 @@ body.archivo-open .navbar button { /*cambio para contraste*/
   width: 100%;
   height: 100vh;
 
-  background: #000000; /*no sabes si en blanco o negro*/
+  /*background: #000000; no sabes si en blanco o negro*/
   color: #ffffff;
+  backdrop-filter: blur(10px); /*esta cosa mola mogollón, fondo "translucido" en lugar de opaco*/
 
   transform: translateY(100%);
   transition: transform 0.6s ease;
@@ -138,7 +105,7 @@ body.archivo-open .navbar button { /*cambio para contraste*/
   overflow-y: auto;   /*ojo, SIN esto no hay barrita con scroll */
 }
 
-#archivoPanel.open {
+#archivoPanel.desplegar {
   transform: translateY(0);
 }
 
@@ -164,10 +131,10 @@ body.archivo-open .navbar button { /*cambio para contraste*/
           .archivo-texto {  /*contiene texto*/
           max-width:420px;
           }
-                .archivo-num {
+                /*.archivo-num { fuera, no me va
                 font-size:10px;
                 opacity:0.4;
-                }
+                }*/
                 .archivo-texto h2 {
                 font-size:12px;
                 font-weight:500;
@@ -194,7 +161,45 @@ body.archivo-open .navbar button { /*cambio para contraste*/
                 opacity:0.6;
                 } 
 
+/*#info-bar {
+  background: #ffffff;
+  color: #111;
 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+
+  padding: 0;
+  z-index: 100;
+}
+
+          #info-bar p {
+            font-size: 11px;
+            line-height: 1.5;
+            margin: 0;
+          }
+
+          .info-left {
+            font-size: 11px;
+          }
+          .info-center {
+            max-width: 520px;
+            margin: 0 auto;
+            font-size: 11px;
+          }
+
+          .info-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: flex-end;
+          } */
 
 
 
