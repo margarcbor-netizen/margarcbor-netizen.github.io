@@ -7,20 +7,37 @@ body {
         }
     }
 
-    a {
-        text-decoration: none;
-        color: black
-    }
 
+.intro-garbo {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background: none;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    cursor: pointer;
 
+}
 /* navbar*/
 .navbar {
-    position: fixed;
-    top: 0;
+    position: fixed;        /* se mantiene mientras haces scroll */
+    top: 38%;               /* mitad de la ventana */
     left: 0;
     width: 100%;
     padding: 1.5rem;
-    z-index: 2000;
+    z-index: 100; /*arriba SIEMPRE*/
+    /*position: relative; /*si pones absolute se queda arriba */
+    /*top: 50; /*esto deberia dejarte bajarlo, pero no*/
+    
+}
+.navbar a {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: none;
 }
 .navbar button {
     font-family: Helvetica, sans-serif;
@@ -28,7 +45,7 @@ body {
     color: black;
     background: none;
     border: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     cursor: pointer;
 }
 
@@ -165,6 +182,8 @@ body#archivoPanel-open .navbar button { /*cambio para contraste*/
 #infoBar {
   background: #ffffff;
   color: black;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
 
   position: fixed;
   bottom: 0;
