@@ -28,8 +28,14 @@ body {
     z-index: 100; /*arriba SIEMPRE*/
     /*position: relative; /*si pones absolute se queda arriba */
     /*top: 50; /*esto deberia dejarte bajarlo, pero no*/
-    
+    transform: translateY(-38);
+    display: flex;
+    gap: 40px;
+    font-size: 24px;
+    transition: top 0.5s ease, transform 0.5s ease; /*transición suave al subir*/
+    z-index: 100;
 }
+
 .navbar a {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
@@ -49,9 +55,23 @@ body {
     cursor: pointer;
 }
 
-body#archivoPanel-open .navbar button { /*cambio para contraste*/
+/*nav cambio a blanco contraste*/
+body.archivo-desplegado .navbar button {
   color: white;
+  font-weight: 500; /*cambia el peso porque bold en blanco es demasiado*/
 }
+body.archivo-desplegado .navbar a{
+  color: white;
+  font-weight: 500;
+}
+
+
+/* clase que sube la navbar al abrir el panel */
+.navbar.arriba {
+  top: 0;             /* se coloca en la parte superior */
+  transform: translateY(0); /* elimina el centrado vertical */
+}
+
 
 
 
@@ -105,14 +125,15 @@ body#archivoPanel-open .navbar button { /*cambio para contraste*/
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 20;
 
   background: #000000; /*no sabes si en blanco o negro*/
-  color: #ffffff;
   /*backdrop-filter: blur(10px); esta cosa mola mogollón, fondo "translucido" en lugar de opaco*/
+  color: #ffffff;
 
   transform: translateY(100%);
   transition: transform 0.6s ease;
-  z-index: 20;
+
 
   overflow-y: auto;   /*ojo, SIN esto no hay barrita con scroll */
 }
@@ -121,13 +142,22 @@ body#archivoPanel-open .navbar button { /*cambio para contraste*/
   transform: translateY(0);
 }
 
+  .archivo-header h1 {
+    display: flex;
+    margin-top: 8%;
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-left: 1.5rem;
+  }
   .archivo-columna { /*conjunto items*/
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
-    padding: 0.8rem;
+    /*margin-top: 10%; aqui controlas margen respecto a nav si no pones texto sobre columna*/
+    padding: 0.2rem;
   }
-
   .archivo-proyecto { /*cada item*/
     display: grid;
     grid-template-columns: 300px auto; /* con esto cambias la distancia entre img y texto*/
@@ -177,13 +207,14 @@ body#archivoPanel-open .navbar button { /*cambio para contraste*/
                   }
                   .flecha:hover {
                     opacity:0.6;
-                  }                                  
-                
+                  }     
+                                             
+/*franja abajo*/             
 #infoBar {
   background: #ffffff;
   color: black;
   font-family: Helvetica, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 
   position: fixed;
   bottom: 0;

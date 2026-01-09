@@ -4,9 +4,12 @@ const archivoBtn = document.getElementById('archivoBtn');
 const archivoPanel = document.getElementById('archivoPanel');
 const flowTrack = document.getElementById("flowTrack");
 const infoBar = document.querySelector("infoBar");
+const navbar = document.querySelector(".navbar");
 
 archivoBtn.addEventListener('click', () => {
     archivoPanel.classList.toggle('desplegar');
+    document.body.classList.toggle("archivo-desplegado"); /* cambia color a blanco para contraste*/
+    navbar.classList.toggle("arriba");  /* translada navbar arriba cuando estas en archivo!!*/
 });
 
 archivoPanel.querySelectorAll('a').forEach(link => {
@@ -14,6 +17,12 @@ archivoPanel.querySelectorAll('a').forEach(link => {
     archivoPanel.classList.remove('desplegar');
   });
 })
+
+
+
+
+
+
 
 
 
