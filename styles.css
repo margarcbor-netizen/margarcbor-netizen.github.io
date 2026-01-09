@@ -120,43 +120,7 @@ body {
           } */
 
 
-
-
-/*archivo panel nuevo*/
-#archivoPanel {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20vh; /*para que sobre salga y haya que scrollear, no nueva pantalla directa*/
-    
-  background: #ffffff; /*no sabes si en blanco o negro*/
-  color: #000000;
-
-  transform: translateY(70%); /* solo asoma */
-  /*transform: translateY(100%);pag completa*/
-  transition: transform 0.6s ease;
-  z-index: 100; 
-
-  overflow-y: auto;/*ojo, SIN esto no hay scroll */
-  -webkit-overflow-scrolling: touch;
-}
-
-    #archivoPanel.open { /*sin esto el panel NO sale*/
-    transform: translateY(0);
-  }
-    #archivoPanel.is-open { 
-    transform: translateY(20vh); /*esto debería hacer no salga entero, deja 20 vh fuera y hay que scrollear*/
-  }
-
-  .archivo-section { /*nuevo*/
-    min-height: 0vh;
-    padding: 3rem 2rem;
-  }
-
-
-
-/*archivo panel full
+/*archivo panel full*/
 #archivoPanel {
   position: fixed;
   bottom: 0;
@@ -164,22 +128,14 @@ body {
   width: 100%;
   height: 100vh;
 
-  background: #ffffff; /*no sabes ssi en blanco o negro
+  background: #ffffff; /*no sabes ssi en blanco o negro*/
   color: #000000;
-  transform: translateY(100%); /*pag completa
+  transform: translateY(100%); /*pag completa*/
   transition: transform 0.6s ease;
   z-index: 20;
 
-  overflow-y: auto;/*ojo, SIN esto no hay scroll
+  overflow-y: auto;/*ojo, SIN esto no hay scroll*/
 }
-
-  #archivoPanel.open { /*esto abre el panel desde abajo hasta pagina completa
-  transform: translateY(0);
-  }
-  body.archivo-open { al abrir panel scrollea él, no la home, pero creo que da igual porque en principio tu home no tiene scroll
-    overflow: hidden;
-  }*/
-
 
   .archivo-columna { /*conjunto items*/
     display: flex;
