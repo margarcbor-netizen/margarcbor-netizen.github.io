@@ -20,15 +20,6 @@ archivoPanel.querySelectorAll('a').forEach(link => {
 
 
 
-
-
-
-
-
-
-
-
-
 /*al desplegar panel ocultar flow y info= pasando
 
 if (archivoPanel.classList.contains("desplegar")) {
@@ -62,4 +53,36 @@ boton.addEventListener("click", () => {
     carrusel.classList.remove("ocultar");
   }
 });*/
+
+
+/*proyectos*/
+
+
+
+
+
+
+
+
+
+
+
+/*const scrollBtn = document.getElementById("scrollBtn"); /*para subir arriba
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});*/
+
+
 

@@ -8,16 +8,114 @@
 <link rel="stylesheet" href="styles.css">
 </head >
 
-<body class= "intro" id= introCoxal>
-    <nav class="navbar">
-        <a href="index.html" class="volver-inicio">Garbo</a> <!--enlace para volver a principal-->
-        <button id="archivoBtn">archivo</button>  <!--debería permitir volver a proyectos-->
-    </nav>
+<body class= "cadaproyecto" id=Coxal>
 
-    <h1>COXAL</h1>
-    <h2>una colección de joyería desde la exploración formal de la morfología y conexiones de elementos del sistema óseo, que se transforman en piezas de joyería desde su mutación e interacción consigo mismas o con otras biológicamente compatibles. Con el modelado 3D como medio de exploración, convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional y conceptual eludiendo la referencialidad directa</h2>
-  </nav>
-    
+    <nav class="navbar" id="navP">
+        <a href="index.html" class="volver-inicio">garbo</a> <!--enlace para volver a principal-->
+        <button id="archivoBtn">archivo</button>  <!--boton activa pestaña que desliza, NO quieres enlace a nueva página-->
+    </nav> 
+
+    <div class="container-fluid"> <!--contenedor principal de bootstrap, ocupa 100% de pantalla-->
+      <div class="row align-items-start"> <!-- row activa grid bootstrap + align-items-start alinea verticalmente las columnas arriba del todo. -->
+
+        <div class="col-12 col-md-6 intro"> <!--Contenedor padre: texto a la izquierda, imagen a la derecha-->
+        <!-- col 12 = en movil columna ocupa 12/12, el 100% del ancho. genera layout vertical
+        col-md-6 = Ocupa 6/12, el 50% del ancho. genera 2 columnas NO se si quiero esto o más--> 
+        
+            <div class="ensencial"> 
+            <!-- meter lo que tiene que ir en paralelo en div grande para compartimentar en dos pequeños y decir que estos esten inline-->
+                <div class= titulo>
+                    <h1>Coxal</h1>
+                    <h2> piezas de joyería desde la exploración</h2>
+                </div> 
+                <div class="clasificar"> <!--se llama meta-->
+                    <p>
+                    tipología/objeto <br>
+                    proyecto académico <br>
+                    enero de 2025 <br>
+                    </p>
+                </div>
+            </div>
+                
+            <div class="descripcion"> <!-- tiene que ir bajo lo esencial-->
+                <div class="densa"> 
+                    <p>
+                        de la morfología y conexiones de elementos del sistema óseo, que se transforman
+                        en piezas de joyería desde su mutación e interacción consigo mismas o con otras
+                        biológicamente compatibles. Con el modelado 3D como medio de exploración,
+                        convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional
+                        y conceptual eludiendo la referencialidad directa
+                    </p>
+                </div>
+
+                <div class="keywords"> <!-- quiza te viene mejor usar spans, que son pequeñas unidades-->
+                        <p>modelado 3D como medio</p>
+                        <p>explorar, iterar, converger</p>
+                        <p>biomorfismo como recurso funcional</p>
+                </div>
+            </div>
+        </div>  <!-- cierre introduccion-->
+
+            
+        <div class="col-12 col-md-6 imagen"> <!-- es la segunda columna-->
+            <!-- tiene que estar al mismo nivel que el div que contiene toda la intro para que esten en paralelo -->
+                <img src="./img2/2_p.jpg" alt="Piezas de joyería Coxal" class="img-fluid">
+        </div>
+    </div> <!--cierre div intro proyecto-->
+            
+
+    <!-- profundizar-->
+    <div class="chicha">
+
+        <div class="concepto"> 
+            <div class="imagen-concepto"> 
+                <img src="./img2/coxal/concepto/dibujillo 1.jpg" alt="concepto1" class="img-fluid">
+                <img src="./img2/coxal/concepto/dibujillo 2.jpg" alt="concepto2" class="img-fluid">
+            </div>
+
+            <div class="texto-concepto"> 
+                <h1> El concepto</h1>
+                <p> 
+                    Hay piezas de joyería que se convierten en “una parte más” de su portador,  
+                    ¿que mejor recurso  que  transladar la estructura interna del cuerpo a las piezas que, en muchas ocasiones, 
+                    se convierten en una estructura externa “integrada” en dicho cuerpo? [1]
+                </p>
+
+                <p> 
+                    sintetizar formas óseas en unidades sencillas que, desde la mutación 
+                    y la interacción, convergen en piezas que integran el biomorfismo e interconexiones 
+                    óseas a nivel formal y funcional [2]
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--<main class="intro">
+        <div class="esencial">
+            <p>
+            una colección de joyería desde la exploración formal de 
+            la morfología y conexiones de elementos del sistema óseo, que se 
+            transforman en piezas de joyería desde su mutación e interacción consigo mismas o con otras biológicamente compatibles. 
+            Con el modelado 3D como medio de exploración, convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional y conceptual eludiendo la referencialidad directa</h2>
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="./img2/xal.gif" alt="Object" />
+        </div>
+    </main>-->
 
 
 
@@ -30,14 +128,7 @@
 
 
 
-
-
-
-
-
-
-
-
+<button id="scrollBtn"> aaariba</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> <!--link .js bootstrap-->
     <script src="script.js"></script> 
