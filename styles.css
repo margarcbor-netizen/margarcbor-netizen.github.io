@@ -265,24 +265,22 @@ body {
 /*proyectos*/
 
 .cadaproyecto {
-  padding: 0.2;
   overflow-y: auto;   /*ojo, SIN esto no hay barrita con scroll */ 
 }
 
 .intro {
+  position: relative;
   display: flex;   /* pone a sus hijos, intro e imagen, en fila */
   flex-direction: column;
   justify-content: space-between;
   margin-top: 2%;
   margin-left: 2%;
-  max-width: 700px;
 }
 
       .esencial {
         display: inline-block;           /* pone hijos en fila */
         flex-direction: row;     /* horizontal */
         justify-content: space-between; /* separación entre izquierda y derecha */
-        align-items: flex-start;
 
         gap: 1rem;
         margin-bottom: 2rem;
@@ -294,8 +292,6 @@ body {
             .titulo {
               display: flex;
               flex-direction: column; /*titulo y subtitulo apilados*/
-              gap: 0.5rem;
-              max-width: 500px;
             }
                   .titulo h1 {
                   font-weight: bold;
@@ -303,7 +299,7 @@ body {
                   font-size: 1rem;
                   }
 
-                  .tituloysub h2 {
+                  .titulo h2 {
                   font-weight: bold;
                   color: black;
                   font-size: 1rem;
@@ -325,9 +321,8 @@ body {
       .descripcion {
         display: block;
         margin-bottom: 4rem;
-        margin-left: 2%;
-        max-width: 500px;
         font-family: Helvetica, sans-serif;
+        max-width: 800px;
       }
 
             .densa {
@@ -335,8 +330,6 @@ body {
               color: black;
               font-size: 1rem;
               margin-bottom: 4rem;
-              margin-left: 2%;
-              max-width: 500px;
             }
 
             .keywords {
@@ -348,55 +341,51 @@ body {
             }
 
 
-.imagen {
+.imagen-intro {
+  top: 20%;
+  right: 5%;
+
+  position: absolute;
   max-width: 100%;
   height: auto;
   justify-content: flex-end;
   align-items: end;
 }
-.imagen img {
-  width: 400px;
-}
 
 
 
+/*chicha*/
 .concepto { /*esto te permite poner el header y la columna tocha en paralelo*/
     display: inline-flex;
     margin-top: 8%;
   }
+    .imagen-concepto {
+      display: flex;
+      flex-direction: column;
+      /*margin-top: 10%; aqui controlas margen respecto a nav si no pones texto sobre columna*/
+      /*padding: 0.2rem;*/
+    }
 
 
+    .texto-concepto { /*conjunto items*/
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      margin-left: 1.5rem;
+    }
+            .texto-concepto h1 {
+              font-family: Helvetica, sans-serif;
+              font-weight: bold;
+              font-size: 0.8rem;
+            }
 
-  .imagen-concepto {
-    display: flex;
-    flex-direction: column;
-    /*margin-top: 10%; aqui controlas margen respecto a nav si no pones texto sobre columna*/
-    /*padding: 0.2rem;*/
-  }
-          .imagen-concepto img {
-          width: 1000px;
-          }
-
-
-  .texto-concepto { /*conjunto items*/
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    margin-left: 1.5rem;
-  }
-          .texto-concepto h1 {
+            .texto-concepto h1 {
             font-family: Helvetica, sans-serif;
-            font-weight: bold;
+            font-weight: 500;
             font-size: 0.8rem;
-          }
-
-          .texto-concepto h1 {
-          font-family: Helvetica, sans-serif;
-          font-weight: 500;
-          font-size: 0.8rem;
-          }
-          
-          
+            }
+            
+            
 
 
 
