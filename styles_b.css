@@ -20,14 +20,17 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: fixed;   /* fija a la izquierda */
-  width: 20rem;
+  /*width: 20rem;  NO, impide cambio responsive*/ 
+  /*position: fixed; NO, entonces impide que se apile*/ 
+  
 }
 
       /*footer*/             
       .columna-aire footer {
-        margin-top: auto;          /* empuja el footer al final, QUIETO */
-        padding: 1rem 0;           /* espacio arriba y abajo */
+        position: fixed; /* no permite el responsive, OJO fija a la izquierda */
+        bottom:0;
+        margin-bottom: auto; /* empuja el footer al final, QUIETO */
+        padding: 1rem 0; /* espacio arriba y abajo */
 
         font-family: Helvetica, sans-serif;
         font-weight: 600;
@@ -58,13 +61,13 @@ html, body {
 
 
 .columna-proyectos {
-  position: absolute;       /* se posiciona respecto al body */
+  position: relative;       /* se posiciona respecto al body */
   padding-top: 4rem;
-  top: 0;
-  margin-left: 700px;           /* justo después de la columna aire */
   margin-right:auto;                 /* ocupa hasta el borde derecho */
-  bottom: 0;
   overflow-y: auto;         /* scroll único */
+  /*margin-left: 700px;justo después de la columna aire */
+
+  align-content: end;
 
   font-family: Helvetica, sans-serif;
   color: black;
@@ -82,8 +85,8 @@ html, body {
 
       .archivo-texto {  /*contiene texto*/
           max-width:400px;
-          display: flex;             /* convierte el contenedor en flex */
-          flex-direction: column;    /* mantiene texto en columna, pero no te deja mover la flecha*/
+          display: flex; /* convierte el contenedor en flex */
+          flex-direction: column; /* mantiene texto en columna, pero no te deja mover la flecha*/
           
           height: 100%; /* opcional: para ocupar todo el alto del artículo */
           position: relative;
@@ -126,7 +129,15 @@ html, body {
                   }     
                                  
 
-     
+    @media (max-width: 768px) {
+  .columna-aire {
+    min-height: auto;   /* ya NO ocupa toda la pantalla */
+  }
+
+  .columna-aire footer {
+    margin-top: 1rem;   /* vuelve a flujo normal */
+  }
+} 
 
 
 
@@ -405,22 +416,23 @@ html, body {
 
 .conc-img {
     margin-top: 0.2rem;
-    width:680px;
+    width:100%;
     height: auto;
-    position: absolute;
+    position: relative;
 }
-.texto-concepto {
-width: 400px;
-position:absolute;
+.concepto-tx {
+width: 100%;
+position: relative;
+/*position:absolute; jode bootstrap*/
 margin-top: 4rem;
 }
-        .texto-concepto h1 {
-          font-size: 0.8rem;
+        .concepto-tx h1 {
+          font-size: 0.6rem;
           font-weight:bold;
         }
 
-        .texto-concepto p {
-          font-size: 0.8rem;
+        .concepto-tx p {
+          font-size: 0.6rem;
           font-weight:500;
           margin-top: 1rem;
         }

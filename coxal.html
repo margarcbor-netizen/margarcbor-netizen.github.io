@@ -12,7 +12,7 @@
 
     <nav class="navbar" id="navP">
         <a href="index.html" class="volver-inicio">garbo</a> <!--enlace para volver a principal-->
-        <button id="archivoBtn">archivo</button>  <!--boton activa pestaña que desliza, NO quieres enlace a nueva página-->
+        <button id="archivoBtn">vuelta al archivo</button>  <!--boton activa pestaña que desliza, NO quieres enlace a nueva página-->
     </nav> 
 
     <!-- chuleta bootstrap = sistema basado en 12 columnas
@@ -32,7 +32,7 @@
     <div class="container my-5">
 
             <!-- primera fila con dos columnas, una estrecha y otra más ancha con aire -->
-            <div class="row align-items-start">
+            <div class="row align-items-start" id="intro">
 
                 <!-- columna pequeña (imagen) quedrá arriba en movil-->
                 <div class="col-12 col-md-4 order-1 order-md-2">
@@ -44,7 +44,7 @@
                 </div>
 
                 <!-- columna grande (texto) -->
-                <div class="col-12 col-md-8 order-2 order-md-1" > 
+                <div class="col-12 col-md-8 order-2 order-md-1 mi-columna" > 
                     <div class="categoriza">
                         <p>
                             COXAL <br>
@@ -55,7 +55,9 @@
                     </div>
                     
                     <div class="esencial"> 
-                        <h1>Coxal, piezas de joyería desde la exploración formal</h1>
+                        <h1>Coxal,  piezas de joyería <br>
+                         desde la exploración formal<br>
+                        </h1>
 
                         <p>
                             De la morfología y conexiones de elementos del sistema óseo, que se transforman
@@ -65,13 +67,10 @@
                             y conceptual eludiendo la referencialidad directa.
                         </p>
 
-                        <!--<img src="./img2/coxal/xal2.gif" class="mega-gif"> -->
-
-                        <!--<div class="keywords">
-                            <p>modelado 3D como medio </p>
-                            <p>explorar, interar, converger</p>
-                            <p>biomorfismo como recurso funcional</p>
+                        <!--<div class="esencial-gif">
+                            <img src="./img2/xal (2).gif" class="mega-gif" width="120"> 
                         </div> -->
+                        
                     </div>
                 </div>
 
@@ -79,62 +78,70 @@
 
     
 <!--concepto-->
-    <div class="container my-5">
+    <div class="container my-5" Id="concepto">
             <div class="row"> <!-- las dos-->
+                
+                <div class="col-12 col-md-4">
+                    <div class="concepto-aire"> </div>
+                </div>
 
-                <div class="col-12 col-md-8">
-                     <img src="./img2/coxal/concepto/dibujillos.jpg" alt="concepto" class="conc-img">
+                <div class="col-12 col-md-4"> <!-- mide 450-->
+                    <img src="./img2/coxal/concepto/dibujillos.jpg" alt="concepto" class="zoom-img" width="350px">
+                    <div id="overlay"><span id="close">&times;</span><img id="overlay-img" src="./img2/coxal/concepto/dibujillos.jpg"></div>
                 </div>
 
                 <div class="col-12 col-md-4"> <!--8+4=12-->
-                    <div class="texto-concepto"> 
+                    <div class="concepto-tx"> 
                         <h1> El concepto</h1>
                         <p> 
                             Hay piezas de joyería que se convierten en “una parte más” de su portador,  
                             ¿que mejor recurso  que  transladar la estructura interna del cuerpo a las piezas que, en muchas ocasiones, 
-                            se convierten en una estructura externa “integrada” en dicho cuerpo? [1]
+                            se convierten en una estructura externa “integrada” en dicho cuerpo?
                         </p>
 
                         <p> 
-                            sintetizar formas óseas en unidades sencillas que, desde la mutación 
+                            Así se abordó el proceso creativo desde la síntesis de formas óseas en unidades sencillas que, desde la mutación 
                             y la interacción, convergen en piezas que integran el biomorfismo e interconexiones 
-                            óseas a nivel formal y funcional [2]
+                            óseas a nivel formal y funcional
                         </p>
                     </div>
                 </div>
-   
+
+                
             </div>
     </div>
 
 
 
 
-    <!--<div class="container my-5" id="proceso">
-        <div class="row">
+    <div class="container my-5" id="proceso">
+        <div class="row align-items-start" >
 
-        
-            <div class="col-12 col-md-8">
-                <div class="proceso1a"> 
-                    <img src="./img2/coxal/explorar/1_biblio_oseac.jpg" alt="proceso" class="proc-img mt5"> margen sup 5 rem margen inf 3
+            <div class="col-12 col-md-4 order-1 order-md-2">
+                <div class="proceso-biblio"> 
+                    <img src="./img2/coxal/explorar/1_biblio_oseac.jpg" alt="proceso" class="zoom-img"> <!--margen sup 5 rem margen inf 3-->
+                    <div id="overlay"><span id="close">&times;</span><img id="overlay-img" src="./img2/coxal/explorar/1_biblio_oseac.jpg"></div>
                     <div class="piefoto">
-                        biblioteca ósea<br>
-                        fuente de recusos formales y punto de partida
+                        <p> Desde la biblioteca ósea, 
+                        fuente de recusos formales y punto de partida  
+                        exploración incial de mutaciones, operaciones 
+                        e interacciones de los recursos biomorfos hasta 
+                        llegar a las formas unidad
+                        </p>
                     </div>
+                     <img src="./img2/coxal/explorar/c2_otra_mirada - copia.jpg" alt="proceso" width="800">
+                </div>
+            </div>
+           
+
+            <div class="col-12 col-md-8 order-2 order-md-1 mi-columna">
+                <div class="proceso-explorar">
+                    <img src="./img2/coxal/explorar/2_exploracion_y_sintesisc.jpg" alt="concepto" width="800">
                 </div>
             </div>
 
-            <div class="col-12 col-md-4">
-                <div class="proceso1b">
-                    <img src="./img2/coxal/explorar/2_exploracion_y_sintesis.jpg" alt="concepto" class="proc-img mt5">
-                    <div class="piefoto"> 
-                        exploración incial de mutaciones, operaciones <br>
-                        e interacciones de los recursos biomorfos hasta <br> 
-                        llegar a las formas unidad <br>s
-                    </div>
-                </div>
-            </div>
         </div>
-    </div> -->
+    </div> 
 
 
 
@@ -166,7 +173,10 @@
 
 
 
-
+ <div id="modal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="modal-img">
+                    </div>
 
 
 <button id="scrollBtn"> aaariba</button>

@@ -20,6 +20,32 @@ archivoPanel.querySelectorAll('a').forEach(link => {
 
 
 
+
+
+/*zoom*/
+const overlay = document.getElementById('overlay');
+const overlayImg = document.getElementById('overlay-img');
+const close = document.getElementById('close');
+const body = document.body;
+
+document.querySelectorAll('.zoom-img').forEach(img => {
+  img.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    overlayImg.src = img.src;
+  });
+});
+
+close.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+
+// también cerrar al hacer clic fuera de la imagen
+overlay.addEventListener('click', (e) => {
+  if(e.target === overlay) {
+    overlay.style.display = 'none';
+  }
+});
+
 /*al desplegar panel ocultar flow y info= pasando
 
 if (archivoPanel.classList.contains("desplegar")) {
