@@ -100,7 +100,7 @@ body {
   display: flex;
   width: max-content;
   height: 100%;
-  animation: scroll 22s linear infinite; /* su velocidad natural */
+  animation: scroll 30s linear infinite; /* su velocidad natural */
 }
 
 .flow-track img {
@@ -247,6 +247,8 @@ body {
             font-size: 11px;
             line-height: 1.5;
             padding: 1.5rem;
+            text-decoration: none;
+            color: #000000;
           }
 
           .info-left {
@@ -265,9 +267,14 @@ body {
             justify-content: flex-end;
             padding-right: 5em;
 
-          } */
-
-
+          }
+          .info-left a {
+            color: inherit;
+            text-decoration: none;
+          }
+          .info-left a:hover {
+          opacity:0.6;
+          }
 
 /*proyectos*/
 
