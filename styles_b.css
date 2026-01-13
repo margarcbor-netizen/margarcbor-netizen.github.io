@@ -1,0 +1,659 @@
+
+body {
+    background-color: #ffffff;
+    @font-face {
+            font-family: Helvetica, sans-serif;
+            src: url(./fuente/Helvetica\ LT\ Std/) format('truetype');
+        }
+    }
+
+html, body {
+  height: 100%;
+}
+
+.row {
+  padding-right:2rem;
+  padding-left: 2rem;
+}
+
+.columna-aire {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;   /* fija a la izquierda */
+  width: 20rem;
+}
+
+      /*footer*/             
+      .columna-aire footer {
+        margin-top: auto;          /* empuja el footer al final, QUIETO */
+        padding: 1rem 0;           /* espacio arriba y abajo */
+
+        font-family: Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 0.6rem;
+        color: black;
+      }
+
+      footer p {
+        line-height: 1.5;
+        width: 300px;
+      }
+            .footer-info {
+              margin-top: 0.5rem;
+            }
+
+                .footer-info a {
+                  color: inherit;
+                  text-decoration: none;
+                }
+                .footer-info a:hover {
+                  opacity: 0.6;
+                }
+
+            .footer-guay {
+              margin-top: 0.5rem;
+            }
+
+
+
+.columna-proyectos {
+  position: absolute;       /* se posiciona respecto al body */
+  padding-top: 4rem;
+  top: 0;
+  margin-left: 700px;           /* justo después de la columna aire */
+  margin-right:auto;                 /* ocupa hasta el borde derecho */
+  bottom: 0;
+  overflow-y: auto;         /* scroll único */
+
+  font-family: Helvetica, sans-serif;
+  color: black;
+
+  }
+
+      .proyecto {
+        margin-bottom: 6rem;
+      }
+
+      .proyecto-numero {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .archivo-texto {  /*contiene texto*/
+          max-width:400px;
+          display: flex;             /* convierte el contenedor en flex */
+          flex-direction: column;    /* mantiene texto en columna, pero no te deja mover la flecha*/
+          
+          height: 100%; /* opcional: para ocupar todo el alto del artículo */
+          position: relative;
+        }
+                .archivo-texto h2 {
+                font-size:0.6rem;
+                font-weight:bold;
+                line-height:1.4;
+                margin-bottom: 0.5rem;
+                }
+                .archivo-texto p {
+                font-size:0.6rem;
+                line-height:1.4;
+                opacity:0.7;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                }
+                .categoria{
+                font-size:0.6rem;
+                line-height:1.4;
+                opacity:0.7;
+                }
+
+
+                .un-vistazo {
+                display: flex;             
+                align-items: center;       /*centra verticalmente */
+                justify-content: flex-start; /* alinea flecha al inicio del link */
+                margin-top: 16px;       
+                margin-left: 30;
+                }
+                
+                  .flecha { /* más peque pero mantiene proporciones */
+                        color: #ffffff; 
+                        width: 16px; 
+                        height: 16px; 
+                  }
+                  .flecha:hover {
+                    opacity:0.6;
+                  }     
+                                 
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+/* navbar*/
+.navbar {
+    position: fixed;        /* se mantiene mientras haces scroll */
+    top: 32%;               /* mitad de la ventana */
+    width: 100%;
+    padding-top: 1rem ;
+    padding-left: 5rem; /*esto es margen*/
+    padding-right: 5rem; /*esto es margen*/
+
+    z-index: 100; /*arriba SIEMPRE*/
+    /*position: relative; /*si pones absolute se queda arriba */
+    /*top: 50; /*esto deberia dejarte bajarlo, pero no*/
+    transform: translateY(-38);
+    display: flex;
+    gap: 40px;
+    font-size: 24px;
+    transition: top 0.5s ease, transform 0.5s ease; /*transición suave al subir*/
+    z-index: 100;
+}
+
+#navbar.hidden { /*se aculta al scrollear para abajo*/
+  transform: translateY(-100%);
+}
+
+.navbar a {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.navbar button {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+          /*nav cambio a blanco contraste*/
+          body.archivo-desplegado .navbar button {
+            color: white;
+            font-weight: 500; /*cambia el peso porque bold en blanco es demasiado*/
+          }
+          body.archivo-desplegado .navbar a{
+            color: white;
+            font-weight: 500;
+          }
+
+
+/* clase que sube la navbar al abrir el panel */
+.navbar.arriba {
+  top:0;             /* se coloca en la parte superior */
+  transform: translateY(0); /* elimina el centrado vertical */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*archivo panel full*/
+#archivoPanel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+
+  background: #000000; /*no sabes si en blanco o negro*/
+  /*backdrop-filter: blur(10px); esta cosa mola mogollón, fondo "translucido" en lugar de opaco*/
+  color: #ffffff;
+
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+
+  overflow-y: auto;   /*ojo, SIN esto no hay barrita con scroll */
+}
+
+#archivoPanel.desplegar {
+  transform: translateY(0);
+}
+
+  .archivo-content { /*esto te permite poner el header y la columna tocha en paralelo*/
+    display: inline-flex;
+    margin-top: 8%;
+    padding: 0.2rem;
+  }
+  .archivo-header h1 {
+    display: flex;
+    margin-top: 8%;
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-left: 1.5rem;
+  }
+  .archivo-columna { /*conjunto items*/
+    display: flex;
+    flex-direction: column;
+    /*margin-top: 10%; aqui controlas margen respecto a nav si no pones texto sobre columna*/
+    /*padding: 0.2rem;*/
+  }
+  .archivo-proyecto { /*cada item*/
+    display: grid;
+    grid-template-columns: 300px auto; /* con esto cambias la distancia entre img y texto*/
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+          .archivo-imagen {   /*contiene img*/ 
+            width: 100%;
+            position: relative;
+          }
+        
+                      
+/*franja abajo*/             
+#infoBar {
+  background: #ffffff;
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+
+  /*display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;*/
+
+  padding: 30;
+  z-index: 10; /* asi queda por debajo de panel cuando salga, ni ocultar ni ostias*/
+}
+
+          #infoBar p {
+            font-size: 11px;
+            line-height: 1.5;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #000000;
+          }
+
+          .info-left {
+            font-size: 11px;
+            padding-left: 5em;
+          }
+          .info-center {
+            max-width: 520px;
+            margin: 0 auto;
+            font-size: 11px;
+          }
+
+          .info-right {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-end;
+            padding-right: 5em;
+
+          }
+          .info-left a {
+            color: inherit;
+            text-decoration: none;
+          }
+          .info-left a:hover {
+          opacity:0.6;
+          } 
+
+
+
+
+
+
+
+
+
+
+
+
+          /*proyectos*/
+
+.ext-royecto {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  overflow-y: auto;   /*ojo, SIN esto no hay barrita con scroll */ 
+}
+  
+
+
+
+.categoriza p {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.mega-img {
+  display: block;
+  width: 100%;
+  top: 0%;
+  height: auto;
+}
+
+.piefoto {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.esencial {
+  margin-top: 10%;
+  padding: 0.2;
+  /*gap: 2rem;
+  align-items: flex-start;*/
+}
+
+        .esencial h1 {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-top: 2rem;
+        }
+        .esencial p {
+          font-size: 1rem;
+          font-weight:500;
+          margin-top: 1rem;
+          max-width: 680px
+        }
+
+
+
+.conc-img {
+    margin-top: 0.2rem;
+    width:680px;
+    height: auto;
+    position: absolute;
+}
+.texto-concepto {
+width: 400px;
+position:absolute;
+margin-top: 4rem;
+}
+        .texto-concepto h1 {
+          font-size: 0.8rem;
+          font-weight:bold;
+        }
+
+        .texto-concepto p {
+          font-size: 0.8rem;
+          font-weight:500;
+          margin-top: 1rem;
+        }
+
+
+
+.proceso1a {
+  margin-top: 20%;
+  position: absolute;
+  width: 680px;
+  align-items: first baseline;
+}
+
+.proceso1a img {
+   width: 680px;
+}
+
+.proceso1b {
+  position: absolute;
+  width: 400px;
+  margin-top:35%;
+}    
+
+.proceso1b img {
+  width: 300px;
+}   
+
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#navP {
+  position: relative;        /* se mantiene mientras haces scroll */
+  top: 38%;               /* mitad de la ventana */
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  z-index: 100; /*arriba SIEMPRE*/
+  display: flex;
+  gap: 40px;
+  font-size: 24px;
+  transition: top 0.5s ease, transform 0.5s ease; /*transición suave al subir*/
+  z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#scrollBtn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#scrollBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*carrousel
+    .flow {
+    height: 100vh;
+    overflow: hidden;
+    }
+
+    .carousel {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    }
+
+    .carousel-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    animation: scroll 20s linear infinite; /* esto es velocidad a la que deslizan sin interaccion
+    }
+
+    .carousel-track img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    } */
+
+/*archivo panel 1
+#archivoPanel {
+  position: fixed;
+  inset: 0;
+  background: white;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: 1500;
+  padding: 6rem 3rem;
+}
+
+#archivoPanel.open {
+  transform: translateY(0);
+}
+
+#archivoPanel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#archivoPanel li {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*de los inicios*/
+
+/*
+.nav-bar {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 2%;
+    color: black;
+}*/
+
+
+/* footer*/
+footer {
+    font-size: 0.60rem;
+    letter-spacing: 0.5px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 2%;
+    color: black;
+}
+
+/*footer a:hover {
+  color: rgb(157, 161, 164);
+}*/

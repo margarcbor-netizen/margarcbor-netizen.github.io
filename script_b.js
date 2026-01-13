@@ -1,0 +1,131 @@
+
+
+const archivoBtn = document.getElementById('archivoBtn');
+const archivoPanel = document.getElementById('archivoPanel');
+const flowTrack = document.getElementById("flowTrack");
+const infoBar = document.querySelector("infoBar");
+const navbar = document.querySelector(".navbar");
+
+archivoBtn.addEventListener('click', () => {
+    archivoPanel.classList.toggle('desplegar');
+    document.body.classList.toggle("archivo-desplegado"); /* cambia color a blanco para contraste*/
+    navbar.classList.toggle("arriba");  /* translada navbar arriba cuando estas en archivo!!*/
+});
+
+archivoPanel.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    archivoPanel.classList.remove('desplegar');
+  });
+})
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  new bootstrap.Carousel(
+    document.querySelector("#slidernodo"),
+    {
+      interval: 1000,
+      ride: "carousel"
+    }
+  );
+});
+
+
+/*document.addEventListener("DOMContentLoaded", () => {
+  // Selecciona cada imagen con efecto blur
+  const imgs = document.querySelectorAll(".blur-on-load");
+
+  imgs.forEach(img => {
+    // Crea elemento nuevo de Image para cargar
+    const temp = new Image();
+    temp.src = img.dataset.src;
+
+    temp.onload = () => {
+      // Cuando la imagen se carga, ponla como src real
+      img.src = temp.src;
+      img.style.opacity = "1";
+      img.style.filter = "blur(0)";
+    };
+  });
+});*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*al desplegar panel ocultar flow y info= pasando
+
+if (archivoPanel.classList.contains("desplegar")) {
+      infoBar.classList.add("ocultar");  // se oculta infoBar
+      flow.classList.add("oculto");      // se oculta carrusel
+    } else {
+      infoBar.classList.remove("ocultar"); // reaparece infoBar
+      flow.classList.remove("oculto");     // reaparece carrusel
+    }
+    
+
+/*al desplegar panel ocultar carroulsel = funciona, pero el carrousel ensucia. quiza si
+home es de otra forma puedes usarlo u mola
+
+archivoBtn.addEventListener('click', () => {
+    archivoPanel.classList.toggle('desplegar');
+
+      flowTrack.classList.toggle(
+      "oculto",
+      archivoPanel.classList.contains("desplegar")
+  );
+    
+});
+
+boton.addEventListener("click", () => {
+  panel.classList.toggle("desplegar");
+
+  if (panel.classList.contains("desplegar")) {
+    carrusel.classList.add("ocultar");
+  } else {
+    carrusel.classList.remove("ocultar");
+  }
+});*/
+
+
+/*proyectos*/
+
+
+
+
+
+
+
+
+
+
+
+/*const scrollBtn = document.getElementById("scrollBtn"); /*para subir arriba
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});*/
+
+
+
