@@ -8,54 +8,139 @@
 <link rel="stylesheet" href="styles.css">
 </head >
 
-<body class= "cadaproyecto" id=Coxal>
+<body class= "ext-proyecto" id=Coxal>
 
     <nav class="navbar" id="navP">
         <a href="index.html" class="volver-inicio">garbo</a> <!--enlace para volver a principal-->
         <button id="archivoBtn">archivo</button>  <!--boton activa pestaña que desliza, NO quieres enlace a nueva página-->
     </nav> 
 
-        <div class="intro"> <!--Contenedor padre de la intro, con texto a la izquierda e imagen a la derecha-->
+    <!-- chuleta bootstrap = sistema basado en 12 columnas
+    .container define el ancho máximo y los márgenes laterales.
+    .row crea una fila horizontal.
+    .col-* divide esa fila en columnas. 
+    col-6 → ocupa 6/12 = la mitad col-8 + col-4 → una ancha y una estrecha (como tu referencia) col-4 col-4 col-4 → tres columnas iguales.
+    
+    cambia orden y tamaño según breakpoint (sm, md, lg, etc.) + si no especificas nada para movil, las columnas se apilan.
+    col-12 col-md-4 order-1 order-md-2"
+            col-12 → en móvil ocupa todo el ancho
+            col-md-4 → desde md (≥768px) ocupa 4/12
+            order-1 → en móvil va primero
+            order-md-2 → en desktop pasa a segundo lugar -->
+     
+     
+    <div class="container my-5">
+
+            <!-- primera fila con dos columnas, una estrecha y otra más ancha con aire -->
+            <div class="row align-items-start">
+
+                <!-- columna pequeña (imagen) quedrá arriba en movil-->
+                <div class="col-12 col-md-4 order-1 order-md-2">
+                        <img src="img2/2_p.jpg" alt="Pieza Coxal" class="mega-img">
+                        <div class="piefoto">
+                            XAL [Pieza n°3]<br>
+                            earcuff desde la fragmentación
+                        </div>
+                </div>
+
+                <!-- columna grande (texto) -->
+                <div class="col-12 col-md-8 order-2 order-md-1" > 
+                    <div class="categoriza">
+                        <p>
+                            COXAL <br>
+                            tipología / objeto <br>
+                            proyecto académico <br>
+                            enero de 2025 <br>
+                        </p>
+                    </div>
+                    
+                    <div class="esencial"> 
+                        <h1>Coxal, piezas de joyería desde la exploración formal</h1>
+
+                        <p>
+                            De la morfología y conexiones de elementos del sistema óseo, que se transforman
+                            en piezas de joyería desde su mutación e interacción consigo mismas o con otras
+                            biológicamente compatibles. Con el modelado 3D como medio de exploración,
+                            convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional
+                            y conceptual eludiendo la referencialidad directa.
+                        </p>
+
+                        <!--<img src="./img2/coxal/xal2.gif" class="mega-gif"> -->
+
+                        <!--<div class="keywords">
+                            <p>modelado 3D como medio </p>
+                            <p>explorar, interar, converger</p>
+                            <p>biomorfismo como recurso funcional</p>
+                        </div> -->
+                    </div>
+                </div>
+
+
+    </div>
+                    <!--<h1>Coxal, piezas de joyería desde la exploración formal</h1>
+
+                    <p>
+                        La morfología y conexiones de elementos del sistema óseo se transforman
+                        en piezas de joyería desde su mutación e interacción consigo mismas o con otras
+                        biológicamente compatibles. Desde el modelado 3D como medio de exploración,
+                        convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional
+                        y conceptual eludiendo la referencialidad directa.
+                    </p>
+                 </div>
+            </div>
+  </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="intro"> 
+        <div class= esencial>
+            <h1> <b>Coxal,</b>piezas de joyería desde la exploración formal</h1>
+        </div> 
+
+        </div class= "descripcion">   
+            <p>La morfología y conexiones de elementos del sistema óseo, que se transforman en piezas de joyería desde su mutación e interacción consigo mismas o con otras biológicamente compatibles. Con el modelado 3D como medio de exploración, convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcionaly conceptual eludiendo la referencialidad directa</p>
+        </div>
+
+        <div class="clasificar"> se llama meta
+            <p>
+                tipología/objeto <br>
+                proyecto académico <br>
+                enero de 2025 <br>
+            </p>
         
-            <div class="ensencial"> 
-            <!-- meter lo que tiene que ir en paralelo en div grande para compartimentar en dos pequeños y decir que estos esten inline-->
-                <div class= titulo>
-                    <h1>Coxal</h1>
-                    <h2> piezas de joyería desde la exploración</h2>
-                </div> 
-                <div class="clasificar"> <!--se llama meta-->
-                    <p>
-                    tipología/objeto <br>
-                    proyecto académico <br>
-                    enero de 2025 <br>
-                    </p>
-                </div>
-            </div>
-                
-            <div class="descripcion"> <!-- tiene que ir bajo lo esencial-->
-                <div class="densa"> 
-                    <p>
-                        de la morfología y conexiones de elementos del sistema óseo, que se transforman en piezas de joyería desde su mutación e interacción consigo mismas o con otras biológicamente compatibles. Con el modelado 3D como medio de exploración, convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcionaly conceptual eludiendo la referencialidad directa
-                    </p>
-                </div>
-
-                <div class="keywords"> <!-- quiza te viene mejor usar spans, que son pequeñas unidades-->
-                        <p>modelado 3D como medio</p>
-                        <p>explorar, iterar, converger</p>
-                        <p>biomorfismo como recurso funcional</p>
-                </div>
-            </div>
-        </div>  <!-- cierre introduccion-->
-
-            
-        <div class="imagen-intro"> 
-            <!-- tiene que estar al mismo nivel que el div que contiene toda la intro para que esten en paralelo -->
+       <div class="imagen-intro"> 
+            tiene que estar al mismo nivel que el div que contiene toda la intro para que esten en paralelo 
                 <img src="./img2/2_p.jpg" alt="Piezas de joyería Coxal"   width= 400px >
         </div>
-    </div> <!--cierre div intro proyecto-->
+    </div> cierre div intro proyecto --> 
             
 
-    <!-- profundizar-->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- profundizar
     <div class="chicha">
 
         <div class="concepto"> 
@@ -82,7 +167,7 @@
         </div>
 
 
-    </div>
+    </div> -->
 
 
 

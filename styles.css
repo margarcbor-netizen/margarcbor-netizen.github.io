@@ -264,84 +264,94 @@ body {
 
 /*proyectos*/
 
-.cadaproyecto {
+.ext-royecto {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
   overflow-y: auto;   /*ojo, SIN esto no hay barrita con scroll */ 
 }
+  
 
-.intro {
-  position: relative;
-  display: flex;   /* pone a sus hijos, intro e imagen, en fila */
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 2%;
-  margin-left: 2%;
+
+
+.categoriza p {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
-      .esencial {
-        display: inline-block;           /* pone hijos en fila */
-        flex-direction: row;     /* horizontal */
-        justify-content: space-between; /* separación entre izquierda y derecha */
+.mega-img {
+  display: block;
+  width: 100%;
+  top: 0%;
+  height: auto;
+}
 
-        gap: 1rem;
-        margin-bottom: 2rem;
-        max-width: 100%;          /* asegúrate de que sea lo suficientemente ancho */
-
-        font-family: Helvetica, sans-serif;
-      }
-
-            .titulo {
-              display: flex;
-              flex-direction: column; /*titulo y subtitulo apilados*/
-            }
-                  .titulo h1 {
-                  font-weight: bold;
-                  color: black;
-                  font-size: 1rem;
-                  }
-
-                  .titulo h2 {
-                  font-weight: bold;
-                  color: black;
-                  font-size: 1rem;
-                  }
-            
-            .clasificar {
-              display: flex;     
-              flex-direction: column;
-              margin-left: auto;   /*empuja este div completamente a la derecha */
-            }
-
-                  .clasificar p {
-                    font-weight: 500;
-                    color: black;
-                    font-size: 0.8rem;
-                  }
-              
-              
-      .descripcion {
-        display: block;
-        margin-bottom: 4rem;
-        font-family: Helvetica, sans-serif;
-        max-width: 800px;
-      }
-
-            .densa {
-              font-weight: bold;
-              color: black;
-              font-size: 1rem;
-              margin-bottom: 4rem;
-            }
-
-            .keywords {
-              display: inline;
-              flex-direction: row;
-              font-weight: 500;
-              color: black;
-              font-size: 0.8rem;
-            }
+.piefoto {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
 
 
-.imagen-intro {
+
+.esencial {
+  margin-top: 11%;
+  padding: 0.2;
+  /*gap: 2rem;
+  align-items: flex-start;*/
+}
+
+        .esencial h1 {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-top: 2rem;
+        }
+        .esencial p {
+          font-size: 1rem;
+          font-weight:500;
+          margin-top: 1rem;
+          max-width: 680px
+        }
+
+
+
+        /*.mega-gif {
+          width: 120px;     
+          height: auto;
+          flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+        .esencial {
+          flex-direction: column;
+        }
+      }*/
+
+
+        /*.keywords {
+          display: flex;
+          gap: 2rem;      /* separación entre párrafos 
+        }
+
+        .keywords p {
+          margin: 0;       
+          white-space: nowrap; /* evita saltos de línea 
+          font-size: 0.8rem;
+          font-weight: 500;
+          margin-top: 0.5rem;
+        }*/
+
+
+
+
+
+
+
+
+
+
+      
+/*.imagen-intro {
   top: 20%;
   right: 5%;
 
@@ -350,7 +360,23 @@ body {
   height: auto;
   justify-content: flex-end;
   align-items: end;
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
