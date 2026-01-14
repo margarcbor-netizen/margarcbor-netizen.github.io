@@ -16,103 +16,117 @@
      maquetarte un template SENCILLO para cada proyecto, o no llegas. Ya te vale que te gusten más las fotos de por ahi que
      las de tus proyectos, pero la verdad es que molan más/*-->
 
-    <!--<h1 class="intro-garbo"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi deserunt qui temporibus iusto, corporis error quae obcaecati perferendis, est quidem veritatis magnam repudiandae sit porro, itaque blanditiis consequuntur tempora voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cum itaque illo dignissimos, quaerat expedita in nisi reiciendis a numquam suscipit id nam quos nulla esse doloremque? Eligendi, deleniti aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla amet modi quae doloribus accusantium repellat necessitatibus eius! Deleniti, vitae maiores, labore asperiores ad dolores excepturi voluptate, delectus quas commodi officia?</h1> -->
-    
-  <!--<nav class="navbar" id="navBar">
-    <a href="index_b.html" class="volver-inicio">garbo</a> enlace para volver a principal
-    <button id="archivoBtn">archivo</button> boton activa pestaña que desliza, NO quieres enlace a nueva página
-  </nav> -->
+  
+<ul class="nav nav-tabs nav-apartados">
+    <li class="nav-item"><a href="index_b.html" class="nav-link">garbo</a></li>
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#bio">bio</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#archivo">archivo</button></li>
+</ul>
 
-    <div class="container-fluid">
-        <div class="row">
+<div class="tab-content"> <!--este cacharro de bootstrap te èrmite hacer que el texto aparezca y desaparezca sin meterte a java, chachi-->
+    <!--completa-->
+    <div class="tab-pane fade" id="archivo"> <!--esto sirve de indice, hace scroll hasta proyecto-->
+        <ul>
+            <li><a href="#nodo">[01] Nodo</a></li>
+            <li><a href="#ludico">[02] Lúdico</a></li> 
+            <li><a href="#ludico">[03] Bitácora</a></li> 
+            <li><a href="#coxal">[04] Coxal</a></li>  
+        </ul>
+    </div>
 
-            <!-- columna izquierda, MUCHOP aire -->
-            <div class="col-md-8 order-1 order-md-2 columna-aire">
+    <!--COMPLETA BIO-->
+    <div class="tab-pane fade show active" id="bio"> 
+        <p>Texto largo de bio, editorial, tranquilo.</p>
+    </div>
+</div>
 
-                <footer>
-                    <div class="footer-texto">
-                        <p>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- columna izquierda, MUCHOP aire -->
+        <div class="col-md-8 order-1 order-md-2 columna-aire"> 
+            <footer>
+                <div class="footer-texto">
+                    <p>
                         Vestibulum et dignissim magna. Nullam at
                         ultrices 1992 felis. Suspendisse facilisis sagittis
                         sem sit amet tempor.
-                        </p>
-                    </div>
-                    <div class="footer-info">
-                        <p>
-                            Mar García bordons<br>
-                            margarcbor@gmail.com<br>
-                            <a href= https://www.instagram.com/garrrrbo?igsh class="instagram">@garrrrbo</a>
-                        </p>
-                    </div>
-                    
-                    <div class="footer-guay">
-                        <p>© GARBO 2025</p>
-                    </div>
-                </footer> 
-            </div>
+                    </p>
+                </div>
+                <div class="footer-info">
+                    <p>
+                        Mar García bordons<br>
+                        margarcbor@gmail.com<br>
+                        <a href= https://www.instagram.com/garrrrbo?igsh class="instagram">@garrrrbo</a>
+                    </p>
+                </div>
+                <div class="footer-guay">
+                     <p>© GARBO 2025</p>
+                </div>
+            </footer> 
+        </div>
 
+        <!-- derecha, proyectos -->
+        <div class="col-md-4 order-1 order-md-2 columna-proyectos">
 
-
-            <!-- derecha, proyectos -->
-            <div class="col-md-4 order-1 order-md-2 columna-proyectos">
-
-                <!-- cada proyecto -->
-                <div class="proyecto" id="nodo">
-                    <div class="row">
-                        <div class="col-2 proyecto-numero">[01]</div>
-                        
-                        <!-- contenido -->
-                        <div class="col-10">
-                            <div class="archivo-texto"> <!-- agrupa el texto a la derecha de la img + limita ancho-->
-                                    <h2> NODO <br> lámpara desde la limitación </h2>
-                                    <p class="categroría"> <!-- subtítulo, tipologia, cliente(?), -->
-                                        tipologia/objeto<br>
-                                        proyecto académico<br>
-                                        en junio, 2025 <br>
-                                        
-                                    <p>Moverse en un marco estrechamente acotado [rara vez por voluntad propia] es el germen de soluciones singulares que no habrían aparecido en otras condiciones. Desde la resiliencia y el pensamiento lateral, NODO es una respuesta concreta a un marco proyectual vinculado a la producción local y al aprovechamiento del material.  </p>
-                                    <a href="nodo.html" class="un-vistazo"> <!-- FLECHA, así puedes cambiar color o meter algun hover-->
-                                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
-                                    </a>
-
-                                    <div class="archivo-imagen">
-                                        <img src="img2/1p3.png" class="d-block w-100 blur-on-load">
-                                    </div>
-                            </div>
-
-                        </div> <!--col-->
-                </div> <!--row-->
-            </div> <!--proyecto nodo-->
-
-            <!-- cada proyecto -->
-            <div class="proyecto" id="coxal">
-                <div class="row">
-                    <div class="col-2 proyecto-numero">[02]</div>
-                    
-                    <!-- contenido -->
+        <!-- cada proyecto -->
+        <div class="proyecto" id="nodo">
+            <div class="row">
+                <div class="col-2 proyecto-numero">[01]</div>
+                <!-- contenido -->
                     <div class="col-10">
                         <div class="archivo-texto"> <!-- agrupa el texto a la derecha de la img + limita ancho-->
-                                <h2> COXAL <br> joyería desde la exploración formal </h2>
-                                <p> <!-- subtítulo, tipologia, cliente(?), -->
-                                    tipologia/objeto<br>
-                                    proyecto académico<br>
-                                    en junio, 2025 <br>
-                                <p>La morfología y conexiones de elementos del sistema óseo se transforman en piezas de joyería desde su mutación e interacción consigo mismas o con otras biológicamente compatibles. Con el modelado 3D como medio de exploración, convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional y conceptual eludiendo la referencialidad directa</p>
-                                <a href="coxal.html" class="un-vistazo"> <!-- FLECHA, así puedes cambiar color o meter algun hover-->
-                                            <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            <h2> NODO <br> lámpara desde la limitación </h2>
+                            <p class="categroría"> <!-- subtítulo, tipologia, cliente(?), -->
+                                tipologia/objeto<br>
+                                proyecto académico<br>
+                                en junio, 2025 <br>
+                                        
+                                <p>Moverse en un marco estrechamente acotado [rara vez por voluntad propia] es el germen de soluciones singulares que no habrían aparecido en otras condiciones. Desde la resiliencia y el pensamiento lateral, NODO es una respuesta concreta a un marco proyectual vinculado a la producción local y al aprovechamiento del material.  </p>
+                                <a href="nodo.html" class="un-vistazo"> <!-- FLECHA, así puedes cambiar color o meter algun hover-->
+                                    <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
                                 </a>
-                        <!-- silder fotitos-->
-                                <div class="carousel-inner">
-                                    <img src="img2/xal (2).gif" class="d-block w-100 blur-on-load">
+
+                                <div class="archivo-imagen">
+                                    <img src="img2/1p3.png" class="d-block w-100 blur-on-load">
                                 </div>
                         </div>
+                    </div> <!--col-->
+            </div> <!--row-->
+        </div> <!--proyecto nodo-->
 
+        <!-- cada proyecto -->
+        <div class="proyecto" id="coxal">
+            <div class="row">
+                <div class="col-2 proyecto-numero">[04]</div>
+                <!-- contenido -->
+                    <div class="col-10">
+                        <div class="archivo-texto"> <!-- agrupa el texto a la derecha de la img + limita ancho-->
+                            <h2> COXAL <br> joyería desde la exploración formal </h2>
+                            <p> <!-- subtítulo, tipologia, cliente(?), -->
+                                tipologia/objeto<br>
+                                proyecto académico<br>
+                                en junio, 2025 <br>
+                            <p>La morfología y conexiones de elementos del sistema óseo se transforman en piezas de joyería desde su mutación e interacción consigo mismas o con otras biológicamente compatibles. Con el modelado 3D como medio de exploración, convergencia y síntesis, nacen piezas que integran el biomorfismo a nivel funcional y conceptual eludiendo la referencialidad directa</p>
+                            <a href="coxal.html" class="un-vistazo"> <!-- FLECHA, así puedes cambiar color o meter algun hover-->
+                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                        <!-- silder fotitos?-->
+                            <div class="archivo-imagen">
+                                <img src="img2/xal (2).gif" class="d-block w-100 blur-on-load">
+                            </div>
+                        </div>
                     </div> <!--col-->
                 </div> <!--row-->
-            </div> <!--proyecto nodo-->
+            </div> <!--proyecto COXAL-->
 
-        </div>
+
+
+
+
+
     </div>
+</div> <!--fin container fluid-->
 
 
 
@@ -167,108 +181,7 @@
 
 
 
- <!-- archivo=indice -->   
-    <section class="archivo-section" id="archivoPanel">
-        <div class="archivo-content">
-
-            <div class="archivo-header"> <!-- va fuera porque quieres que la columna esté a su der y en paralelo-->
-                    <h1>una selección</h1>
-            </div>
-            <div class="archivo-columna"> <!--contiene todos-->
-                
-
-                <article class="archivo-proyecto" id="nodo"> <!-- proyecto individual, <article> representa una unidad de contenido independiente-->
-                    <div class="archivo-imagen"> <!-- fija img en columna a la izq + admite pseudo-elementos + para mantener flexibilidad.-->
-                        <img src="./img2/1_p2.png" width="230"> 
-                    </div> 
-                        <div class="archivo-texto"> <!-- agrupa el texto a la derecha de la img + limita ancho-->
-                            <!-- <span class="archivo-num">001</span>/*-->
-                            <h2> NODO <br> lámpara desde la limitación </h2>
-                                <p> <!-- subtítulo, tipologia, cliente(?), -->
-                                    tipologia/objeto<br>
-                                    <!--dimensiones, si aplica -->
-                                    proyecto académico<br>
-                                    en junio, 2025 <br>
-                                </p>
-                            <a href="nodo.html" class="un-vistazo"> <!-- FLECHA, así puedes cambiar color o meter algun hover-->
-                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
-                            </a>
-                        </div>
-                </article>
-
-
-                <article class="archivo-proyecto" id="archivo-coxal"> 
-                    <div class="archivo-imagen"> 
-                        <img src="./img2/2_p.jpg" width="230">
-                    </div> 
-                        <div class="archivo-texto"> 
-                            <h2>COXAL<br>Joyería desde la exploración formal</h2>
-                                <p>
-                                    tipologia/objeto<br>
-                                    proyecto académico<br>
-                                    en enero, 2025<br>
-                                </p>
-                            <a href="coxal.html" class="un-vistazo"> 
-                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
-                            </a>
-                        </div>
-                </article>
-
-
-                <article class="archivo-proyecto" id="archivo-lúdico"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/3_p.png" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <h2>LÚDICO<br>sistema expositivo modular</h2>
-                                <p>
-                                    tipologia/objeto<br>
-                                    cliente/Dior<br>
-                                    en mayo, 2025<br>
-                                </p>
-                            <a href="ludico.html" class="un-vistazo"> 
-                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
-                            </a>
-                        </div>
-                </article>
-
-                <article class="archivo-proyecto" id="archivo-bitácora"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/4_p.png" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <h2>BITÁCORA<br>archivo de técnicas de producción</h2>
-                                <p>
-                                    tipologia/editorial<br>
-                                    proyecto académico<br>
-                                    en mayo, 2025<br>
-                                </p>
-                            <a href="bitácora.html" class="un-vistazo">
-                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
-                            </a>
-                        </div>
-                </article>
-
-                <article class="archivo-proyecto" id="archivo-insights"> 
-                    <div class="archivo-imagen">
-                        <img src="./img2/5_p.jpg" width="230">
-                    </div> 
-                        <div class="archivo-texto">
-                            <h2>INSIGHTS<br>reconquista del espacio público<br></h2>
-                                <p>
-                                    tipologia/investigación<br>
-                                    proyecto académico<br>
-                                    en mayo, 2023<br>
-                                </p>
-                            <a href="" class="un-vistazo"> 
-                                <svg class="flecha" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4L20 20M20 20V6M20 20H6" stroke="currentColor" stroke-width="2"/></svg>
-                            </a>
-                        </div>
-                </article>
-
-            </div>
-        </div>
-    </section> 
+ 
 
     
 
@@ -277,11 +190,6 @@
 
 
 
-<!--<nav class="nav-bar"> antiguo
-        <a href="index.html" class="logo">garbo</a>
-        <a href="diseño.html">proyectos</a>
-        <a href="archivo.html">archivo</a>
-    </nav> -->
 
 <!-- flowww1 ocupa pantalla completa
   </main>

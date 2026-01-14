@@ -20,6 +20,16 @@ archivoPanel.querySelectorAll('a').forEach(link => {
 
 
 
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   new bootstrap.Carousel(
     document.querySelector("#slidernodo"),
@@ -29,6 +39,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+
+
+
+
+
+
+
+/*zoom*/
+const overlay = document.getElementById('overlay');
+const overlayImg = document.getElementById('overlay-img');
+const close = document.getElementById('close');
+const body = document.body;
+
+document.querySelectorAll('.zoom-img').forEach(img => {
+  img.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    overlayImg.src = img.src;
+  });
+});
+
+close.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+
+// también cerrar al hacer clic fuera de la imagen
+overlay.addEventListener('click', (e) => {
+  if(e.target === overlay) {
+    overlay.style.display = 'none';
+  }
+});
+
+
+
+
+
+
 
 
 /*document.addEventListener("DOMContentLoaded", () => {
