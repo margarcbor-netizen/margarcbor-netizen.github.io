@@ -20,6 +20,16 @@ archivoPanel.querySelectorAll('a').forEach(link => {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*document.addEventListener("DOMContentLoaded", () => {
   new bootstrap.Carousel(
     document.querySelector("#slidernodo"),
