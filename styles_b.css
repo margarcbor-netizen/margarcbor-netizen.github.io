@@ -38,6 +38,7 @@ html, body {
 
       #bio {
         position: fixed;
+        top: 15rem; /*para que esté más abajo, mejor composición*/
         margin-top: 2rem;
         padding: 3rem;
         max-width: 300px; /*si pones solo widht te cargas el responsive*/
@@ -58,12 +59,13 @@ html, body {
 
       #archivo {
         position: fixed;
+        top: 15rem; /*para que esté más abajo, mejor composición*/
         margin-top: 2rem;
         padding: 3rem;
 
         font-family: Helvetica, sans-serif;
         font-weight: 600;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
       }
 
       #archivo a {
