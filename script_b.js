@@ -23,11 +23,21 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.15
-  }
+  {threshold: 0.15}
 );
+
 reveals.forEach(el => observer.observe(el));
+
+window.addEventListener('load', () => { /*esto permite que el mismo efecto pueda aplicarse a los elementos que YA se ven al cargar la página*/
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.85) { /*elemento dentro del 85% = visible*/
+      el.classList.add('visible');
+    }
+  });
+});
+
+
 
 /*zoom intento. no funciona*/
           const overlay = document.getElementById('overlay');
